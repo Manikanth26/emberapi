@@ -1,0 +1,19 @@
+{{page-title "AllItems"}}
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+    </tr>
+    {{#each this.model as |model|}}
+    <tr>
+        <td>{{model.id}}</td>
+        <td><LinkTo @route="get-item" @model="{{model.id}}">{{model.name}}</LinkTo></td>
+    </tr>
+    {{/each}}
+</table>
+
+<button type="button">Add Item</button>
+<button type="button">Update Item</button>
+<button type="button">Delete Item</button>
+
+{{outlet}}
