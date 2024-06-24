@@ -9,11 +9,11 @@ export default class AddItemRoute extends Route {
     addItem() {
         let addNewItem = this.store.createRecord('objects',{
             id:14,
-            name: 'Samsung S24 Ultra'
+            name: "Nokia Phone"
         });
 
         addNewItem.save().then(response=>{
-            console.log("Record saved",response);
+            console.log(response);
         }).catch(error=>{
             console.log("Error",error);
         })

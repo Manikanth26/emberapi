@@ -51,6 +51,7 @@ export default class ObjectsSerializer extends JSONAPISerializer {
                 }
             }
         });
+        console.log(normalizedPayload)
         return {
             data: normalizedPayload
         };
