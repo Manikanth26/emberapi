@@ -10,4 +10,6 @@ Router.map(function () {
   this.route('all-items');
   this.route('add-item');
   this.route('get-item', { path: 'get-item/:id' });
+  this.route('update-item', { path: 'update-item/:id' });
+  this.route('delete-item', { path: 'delete-item/:id' });
 });

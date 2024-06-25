@@ -5,6 +5,6 @@ export default class GetItemRoute extends Route {
   @service store;
 
   async model(params) {
-    return this.store.findRecord('objects',params.id);
+    return this.store.findRecord('objects', params.id);
   }
 }

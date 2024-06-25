@@ -9,12 +9,12 @@
     <tr>
         <td>{{model.id}}</td>
         <td><LinkTo @route="get-item" @model="{{model.id}}">{{model.name}}</LinkTo></td>
+        <td><button type="button"><LinkTo @route="update-item" @model="{{model.id}}">Update Item</LinkTo></button></td>
+        <td><button type="button"><LinkTo @route="delete-item" @model="{{model.id}}">Delete Item</LinkTo></button></td>
     </tr>
     {{/each}}
 </table>
 
-<button><LinkTo @route="add-item">Add Item</LinkTo></button>
-<button type="button">Update Item</button>
-<button type="button">Delete Item</button>
+<button type="button"><LinkTo @route="add-item">Add Item</LinkTo></button>
 
 {{outlet}}
