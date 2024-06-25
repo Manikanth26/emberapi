@@ -11,14 +11,7 @@ export default class AddItemRoute extends Route {
       id: 14,
       name: 'Nokia Phone',
     });
-
-    addNewItem
-      .save()
-      .then((response) => {
-        console.log(response);
-      })
-      .catch((error) => {
-        console.log('Error', error);
-      });
+    addNewItem.save();
+    console.log(this.store.findAll("objects"))
   }
 }
