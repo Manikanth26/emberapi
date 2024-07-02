@@ -12,9 +12,9 @@ export default class UpdateItemRoute extends Route {
   }
 
   @action
-  updateItem(){
-    this.store.findRecord('objects', this.idData).then(function(objects){
-        objects.name = "Samsung S24 Ultra"
+  updateItem() {
+    this.store.findRecord('objects', this.idData).then(function (objects) {
+      objects.name = 'Samsung S24 Ultra';
     });
   }
 }
