@@ -1,0 +1,29 @@
+<body class="addBody">
+<div class="addform">
+<form {{on "submit" this.addItem}}>
+    <div>
+        <label for="id">ID:</label>
+        <input type="text" id="id" {{on "input" this.idValue}} value={{this.id}} />
+    </div>
+    <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" {{on "input" this.nameValue}} value={{this.name}} />
+    </div>
+    <div>
+        <label for="more" >Enter more details?</label>
+        <input type="radio" id="more" name="details" value="Yes" {{on "change" this.moreValue}} value={{this.more}}>Yes
+        <input type="radio" id="more" name="details" value="No" {{on "change" this.moreValue}} value={{this.more}}>No
+    </div>
+    <div>
+        <label for="color">Color:</label>
+        <input type="text" id="color" {{on "input" this.colorValue}} value={{this.color}} disabled={{this.moreDisabled}}/>
+    </div>
+    <div>
+        <label for="capacity">Capacity:</label>
+        <input type="text" id="capacity" {{on "input" this.capacityValue}} value={{this.capacity}} disabled={{this.moreDisabled}}/>
+    </div>
+    
+    <button type="submit">Add</button>
+</form>
+</div>
+</body>

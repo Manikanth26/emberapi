@@ -1,0 +1,36 @@
+.updateBody{
+    background-image: url("/assests/images/4.jpeg");
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: 100% 100%;
+}
+
+.updateForm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.updateForm form{
+    background-color: rgba(23, 21, 21, 0.276);
+    backdrop-filter: blur(20px);
+    display: table;
+    border: 1px solid white;
+    color: white;
+    padding: 30px;
+    border-radius: 10%;
+}
+
+.updateForm div{
+    display: table-row;
+}
+
+.updateForm div label{
+    display: table-cell;
+    padding-right: 20px;
+}
+
+.updateForm div input{
+    display: table-cell;
+}

@@ -1,6 +1,8 @@
 .full_body {
   background-image: url("/assests/images/2.jpg");
-  background-size: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-size: 100% 100%;
   color: white;
 }
 

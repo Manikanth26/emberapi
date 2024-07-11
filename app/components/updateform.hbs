@@ -1,0 +1,11 @@
+<body class="updateBody">
+    <div class="updateForm">
+    <form {{on "submit" this.updateItem}}>
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" {{on "input" this.nameValue}} value={{this.name}} />
+        </div>
+        <button type="submit">Update</button>
+    </form>
+    </div>
+</body>
