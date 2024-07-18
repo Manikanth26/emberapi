@@ -8,5 +8,4 @@ export default class UpdateItemRoute extends Route {
   async model(params) {
     this.itemData.item = params.id;
   }
-
 }

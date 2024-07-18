@@ -4,13 +4,11 @@ import { inject as service } from '@ember/service';
 
 export default class DeleteItemRoute extends Route {
   @service store;
+  @service itemData;
 
-  idData = null;
   async model(params) {
-    this.idData = params.id;
-    return this.store.findRecord('objects', params.id);
+    this.itemData.item = params.id;
   }
-
   @action
   deleteItem() {
     this.store.findRecord('objects', this.idData).then(function (object) {

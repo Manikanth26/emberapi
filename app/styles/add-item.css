@@ -1,36 +1,36 @@
-.addBody{
-    background-image: url("/assests/images/3.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed; 
-    background-size: 100% 100%;
+.addBody {
+  background-image: url("/assests/images/3.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
 }
 
-.addform{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+.addform {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
-.addform form{
-    background-color: rgb(237, 237, 237,.1);
-    backdrop-filter: blur(20px);
-    display: table;
-    border: 1px solid white;
-    color: white;
-    padding: 30px;
-    border-radius: 10%;
+.addform form {
+  background-color: rgb(237 237 237 / 10%);
+  backdrop-filter: blur(20px);
+  display: table;
+  border: 1px solid white;
+  color: white;
+  padding: 30px;
+  border-radius: 10%;
 }
 
-.addform div{
-    display: table-row;
+.addform div {
+  display: table-row;
 }
 
-.addform div label{
-    display: table-cell;
-    padding-right: 20px;
+.addform div label {
+  display: table-cell;
+  padding-right: 20px;
 }
 
-.addform div input{
-    display: table-cell;
+.addform div input {
+  display: table-cell;
 }

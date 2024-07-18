@@ -1,5 +1,5 @@
 import Component from '@glimmer/component';
-import { action, computed } from '@ember/object'
+import { action, computed } from '@ember/object';
 import { tracked } from '@glimmer/tracking';
 import { inject as service } from '@ember/service';
 
@@ -29,11 +29,9 @@ export default class UpdateFormComponent extends Component {
   }
 
   @computed('more')
-  get moreDisabled(){
+  get moreDisabled() {
     return !this.more;
   }
-
-
 
   @action
   colorValue(event) {
@@ -43,7 +41,6 @@ export default class UpdateFormComponent extends Component {
   capacityValue(event) {
     this.capacity = event.target.value;
   }
-  
 
   @action
   addItem(event) {
@@ -52,7 +49,7 @@ export default class UpdateFormComponent extends Component {
       id: this.id,
       name: this.name,
       color: this.color,
-      capacity:this.capacity
+      capacity: this.capacity,
     });
     addNewItem.save();
   }

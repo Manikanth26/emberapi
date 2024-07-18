@@ -3,4 +3,5 @@ import { tracked } from '@glimmer/tracking';
 
 export default class ItemDataService extends Service {
   @tracked item = '';
+  @tracked allMobiles = [];
 }

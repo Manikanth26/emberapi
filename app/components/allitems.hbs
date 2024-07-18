@@ -1,0 +1,26 @@
+<div class="full_body">
+<h1 class="text-center">Mobiles</h1>
+<table class="tableData">
+    <thead>
+        <tr class="text-center">
+            <th>ID</th>
+            <th>Name</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody  id="tableRows">
+        {{#each this.data as |model|}}
+        <tr>
+            <td class="text-center">{{model.id}}</td>
+            <td><LinkTo class="link_no" @route="get-item" @model="{{model.id}}">{{model.name}}</LinkTo></td>
+            <td id="button"><button class="b1" type="button"><LinkTo class="link_button" @route="update-item" @model="{{model.id}}">Update</LinkTo></button></td>
+            <td id="button"><button class="b2" type="button"><LinkTo class="link_button" @route="delete-item" @model="{{model.id}}">Delete</LinkTo></button></td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+<div>
+    Do you want to add an item?
+    <button class="b3" type="button"><LinkTo class="link_button" @route="add-item">Add Item</LinkTo></button>
+</div>
+</div>
