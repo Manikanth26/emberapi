@@ -9,10 +9,4 @@ export default class DeleteItemRoute extends Route {
   async model(params) {
     this.itemData.item = params.id;
   }
-  @action
-  deleteItem() {
-    this.store.findRecord('objects', this.idData).then(function (object) {
-      object.destroyRecord();
-    });
-  }
 }

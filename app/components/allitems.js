@@ -4,22 +4,17 @@ import { inject as service } from '@ember/service';
 import { tracked } from '@glimmer/tracking';
 
 export default class AllitemsComponent extends Component {
-    @service store;
-    @tracked data = [];
+  @service store;
+  @tracked data = [];
 
-    constructor(){
-        super(...arguments);
-        this.allData();
-    }
+  constructor() {
+    super(...arguments);
+    this.allData();
+  }
 
-    async allData() {
-        this.data = await this.store.findAll('objects');
-    }
-    
-    @action
-    deleteItem() {
-        this.store.findRecord('objects', this.idData).then(function (object) {
-        object.destroyRecord();
-        });
-    }
+  async allData() {
+    this.data = await this.store.findAll('objects');
+  }
+
+  
 }

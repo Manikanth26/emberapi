@@ -9,7 +9,23 @@ export default class UpdateFormComponent extends Component {
   @tracked name = '';
   @tracked color = '';
   @tracked capacity = '';
-  @tracked more = '';
+  @tracked more = false;
+  @tracked errors = {};
+
+  validate(){
+    let errors = {};
+
+    if(!this.id){
+      errors.id = "ID is required";
+    }
+
+    if(!this.name){
+      errors.name = "Name is required";
+    }
+
+    this.errors = errors;
+    return Object.keys(errors).length === 0;
+  }
 
   @action
   idValue(event) {
@@ -22,15 +38,8 @@ export default class UpdateFormComponent extends Component {
   }
 
   @action
-  moreValue(event) {
-    console.log(more);
-    this.more = event.target.value;
-    console.log(more);
-  }
-
-  @computed('more')
-  get moreDisabled() {
-    return !this.more;
+  moreValue(event){
+    this.more = event.target.value === "Yes";
   }
 
   @action
@@ -45,12 +54,15 @@ export default class UpdateFormComponent extends Component {
   @action
   addItem(event) {
     event.preventDefault();
-    let addNewItem = this.store.createRecord('objects', {
-      id: this.id,
-      name: this.name,
-      color: this.color,
-      capacity: this.capacity,
-    });
-    addNewItem.save();
+    if(this.validate()){
+      let addNewItem = this.store.createRecord('objects', {
+        id: this.id,
+        name: this.name,
+        color: this.color,
+        capacity: this.capacity,
+      });
+      addNewItem.save();
+    }
+    
   }
 }

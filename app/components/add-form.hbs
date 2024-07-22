@@ -4,25 +4,32 @@
     <div>
         <label for="id">ID:</label>
         <input type="text" id="id" {{on "input" this.idValue}} value={{this.id}} />
+        {{#if this.errors.id}}
+            <div>{{this.errors.id}}</div>
+        {{/if}}
     </div>
     <div>
         <label for="name">Name:</label>
         <input type="text" id="name" {{on "input" this.nameValue}} value={{this.name}} />
+        {{#if this.errors.name}}
+            <div>{{this.errors.name}}</div>
+        {{/if}}
     </div>
     <div>
         <label for="more" >Enter more details?</label>
         <input type="radio" id="more" name="details" value="Yes" {{on "change" this.moreValue}}>Yes
         <input type="radio" id="more" name="details" value="No" {{on "change" this.moreValue}}>No
     </div>
+    {{#if this.more}}
     <div>
         <label for="color">Color:</label>
-        <input type="text" id="color" {{on "input" this.colorValue}} value={{this.color}} disabled={{this.moreDisabled}}/>
+        <input type="text" id="color" {{on "input" this.colorValue}} value={{this.color}} />
     </div>
     <div>
         <label for="capacity">Capacity:</label>
-        <input type="text" id="capacity" {{on "input" this.capacityValue}} value={{this.capacity}} disabled={{this.moreDisabled}}/>
+        <input type="text" id="capacity" {{on "input" this.capacityValue}} value={{this.capacity}} />
     </div>
-    
+    {{/if}}
     <button type="submit">Add</button>
 </form>
 </div>
