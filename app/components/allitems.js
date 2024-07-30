@@ -15,6 +15,4 @@ export default class AllitemsComponent extends Component {
   async allData() {
     this.data = await this.store.findAll('objects');
   }
-
-  
 }

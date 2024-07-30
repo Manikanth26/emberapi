@@ -3,8 +3,9 @@ import { inject as service } from '@ember/service';
 
 export default class GetItemRoute extends Route {
   @service store;
+  @service itemData;
 
   async model(params) {
-    return this.store.findRecord('objects', params.id);
+    this.itemData.item = params.id;
   }
 }

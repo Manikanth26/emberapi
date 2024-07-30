@@ -1,23 +1,33 @@
 .deleteBody {
-    background-image: url("/assests/images/3.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100% 100%;
+  background-image: url("/assests/images/7.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
 }
 
 .deleteform {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 .deleteBox {
-    background-color: rgb(237 237 237 / 10%);
-    backdrop-filter: blur(20px);
-    display: table;
-    border: 1px solid white;
-    color: white;
-    padding: 30px;
-    border-radius: 10%;
+  background-color: rgb(237 237 237 / 10%);
+  backdrop-filter: blur(20px);
+  display: table;
+  border: 1px solid white;
+  color: white;
+  padding: 30px;
+  border-radius: 10%;
+}
+.db1:link, .db1:visited{
+  text-decoration: none;
+  color: white;
+}
+.deleteB{
+  background-color: rgba(128, 0, 128, 0.422);
+  border: none;
+  margin-left: 10%;
+  color: white;
 }

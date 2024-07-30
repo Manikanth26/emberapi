@@ -1,0 +1,23 @@
+.getBody {
+    background-image: url("/assests/images/6.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+  }
+  .getform {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .getBox {
+    background-color: rgb(237 237 237 / 10%);
+    backdrop-filter: blur(20px);
+    display: table;
+    border: 1px solid white;
+    color: white;
+    padding: 30px;
+    border-radius: 10%;
+  }
+  

@@ -4,6 +4,7 @@ import { tracked } from '@glimmer/tracking';
 import { inject as service } from '@ember/service';
 
 export default class UpdateFormComponent extends Component {
+  @service router;
   @service store;
   @tracked id = '';
   @tracked name = '';
@@ -12,15 +13,15 @@ export default class UpdateFormComponent extends Component {
   @tracked more = false;
   @tracked errors = {};
 
-  validate(){
+  validate() {
     let errors = {};
 
-    if(!this.id){
-      errors.id = "ID is required";
+    if (!this.id) {
+      errors.id = 'ID is required';
     }
 
-    if(!this.name){
-      errors.name = "Name is required";
+    if (!this.name) {
+      errors.name = 'Name is required';
     }
 
     this.errors = errors;
@@ -38,8 +39,8 @@ export default class UpdateFormComponent extends Component {
   }
 
   @action
-  moreValue(event){
-    this.more = event.target.value === "Yes";
+  moreValue(event) {
+    this.more = event.target.value === 'Yes';
   }
 
   @action
@@ -52,9 +53,9 @@ export default class UpdateFormComponent extends Component {
   }
 
   @action
-  addItem(event) {
+  async addItem(event) {
     event.preventDefault();
-    if(this.validate()){
+    if (this.validate()) {
       let addNewItem = this.store.createRecord('objects', {
         id: this.id,
         name: this.name,
@@ -62,7 +63,7 @@ export default class UpdateFormComponent extends Component {
         capacity: this.capacity,
       });
       addNewItem.save();
+      this.router.transitionTo('all-items');
     }
-    
   }
 }

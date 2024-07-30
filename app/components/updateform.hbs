@@ -1,11 +1,23 @@
 <body class="updateBody">
     <div class="updateForm">
     <form {{on "submit" this.updateItem}}>
-        <div>
-            <label for="name">Name:</label>
-            <input type="text" id="name" {{on "input" this.nameValue}} value={{this.name}} />
-        </div>
+        <table>
+            <tr>
+                <td>Mobile ID:</td>
+                <td>{{this.dataId}}</td>
+            </tr>
+            <tr>
+                <td>Mobile Name:</td>
+                <td>
+                    <input type="text" id="name" {{on "input" this.nameValue}} value={{this.name}}/>
+                    {{#if this.errors.name}}
+                        <div>{{this.errors.name}}</div>
+                    {{/if}}
+                </td>
+            </tr>
+            
         <button type="submit">Update</button>
+        </table>
     </form>
     </div>
 </body>
